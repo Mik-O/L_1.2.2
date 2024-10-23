@@ -32,6 +32,8 @@ class ViewController: UIViewController {
         yellowLight.alpha = lightIsOff
         greenLight.alpha = lightIsOff
         
+        view.layoutIfNeeded()
+        
         print("Размер стороны доступной из viewDidLoad: ", redLight.frame.height)
         
     }
@@ -47,7 +49,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func startButtonPressed() {
-        if startButton.currentTitle == "START" {
+        if startButton.titleLabel?.text == "START" {
             startButton.setTitle("NEXT", for: .normal)
         }
         
